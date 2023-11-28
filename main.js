@@ -209,8 +209,7 @@ else
 			})
 		);
 		complexSphere.add(sphereWireframeOuter);
-	
-		// 创建内外玻璃球体
+
 		let sphereGlassInner = new THREE.Mesh(
 			new THREE.SphereGeometry(innerSize, 32, 32),
 			new THREE.MeshPhongMaterial({
@@ -233,7 +232,6 @@ else
 		);
 		complexSphere.add(sphereGlassOuter);
 	
-		// 创建粒子效果
 		let particlesOuter = createParticles(outerSize, outerColor);
 		complexSphere.add(particlesOuter);
 	
