@@ -10,8 +10,6 @@ class WindowManager
 	constructor ()
 	{
 		let that = this;
-
-		// event listener for when localStorage is changed from another window
 		addEventListener("storage", (event) => 
 		{
 			if (event.key == "windows")
@@ -59,7 +57,7 @@ class WindowManager
 		}
 	}
 
-	// initiate current window (add metadata for custom data to store with each window instance)
+	// initiate current window 
 	init (metaData)
 	{
 		this.#windows = JSON.parse(localStorage.getItem("windows")) || [];
